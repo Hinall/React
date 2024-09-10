@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./Display.module.css";
-function Display() {
+function Display({ displayValue }) {
   return (
     <>
-      <input type="text" name="" className={styles.display} />
+      <input
+        type="text"
+        value={displayValue}
+        name=""
+        className={styles.display}
+        readOnly
+      />
     </>
   );
 }
