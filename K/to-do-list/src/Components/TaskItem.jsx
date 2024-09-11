@@ -1,12 +1,17 @@
 import React from "react";
 import "./Comp.css";
 import TaskSubItem from "./TaskSubItem";
-function TaskItem({ objectArr }) {
+function TaskItem({ objectArr, deleteItem }) {
   return (
     <>
       {objectArr.map((object, i) => (
         <>
-          <TaskSubItem key={i} taskname={object.taskname} date={object.date} />
+          <TaskSubItem
+            key={i}
+            taskname={object.taskname}
+            date={object.date}
+            deleteItem={deleteItem}
+          />
         </>
       ))}
     </>
