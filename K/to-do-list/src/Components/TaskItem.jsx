@@ -1,16 +1,21 @@
 import React from "react";
 import "./Comp.css";
 import TaskSubItem from "./TaskSubItem";
-function TaskItem({ objectArr, deleteItem }) {
+import { useContext } from "react";
+import { AllItemsContext } from "../store/AllItems";
+
+function TaskItem() {
+  const contextObj = useContext(AllItemsContext);
+  const Items = contextObj.Items;
+
   return (
     <>
-      {objectArr.map((object, i) => (
+      {Items.map((object, i) => (
         <>
           <TaskSubItem
             key={object.taskname}
             taskname={object.taskname}
             date={object.date}
-            deleteItem_c2={deleteItem}
           />
         </>
       ))}

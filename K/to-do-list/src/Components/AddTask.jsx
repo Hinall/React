@@ -3,10 +3,14 @@ import { IoAdd } from "react-icons/io5";
 import "./Comp.css";
 import { useState } from "react";
 import { useRef } from "react";
-function AddTask({ onNewItem }) {
+import { AllItemsContext } from "../store/AllItems";
+import { useContext } from "react";
+
+function AddTask() {
   const tasknameRef = useRef("");
   const duedateRef = useRef("");
-
+  const contextobj = useContext(AllItemsContext);
+  const addItems = contextobj.addItem;
   // const [taskname, setTaskname] = useState("");
   // const [duedate, setduedate] = useState("");
 
@@ -27,7 +31,7 @@ function AddTask({ onNewItem }) {
 
   const handleAddBtn = (event) => {
     event.preventDefault();
-    onNewItem(tasknameRef.current.value, duedateRef.current.value);
+    addItems(tasknameRef.current.value, duedateRef.current.value);
     tasknameRef.current.value = "";
     duedateRef.current.value = "";
   };

@@ -1,10 +1,15 @@
 import React from "react";
 import { TiDelete } from "react-icons/ti";
 import "./Comp.css";
+import { AllItemsContext } from "../store/AllItems";
+import { useContext } from "react";
 
-function TaskSubItem({ taskname, date, deleteItem_c2 }) {
+function TaskSubItem({ taskname, date }) {
+  const context = useContext(AllItemsContext);
+  const deleteItem = context.deleteItem;
+
   const handleDeleteBtn = () => {
-    deleteItem_c2(taskname);
+    deleteItem(taskname);
   };
 
   return (
