@@ -1,9 +1,10 @@
 import React from "react";
+import { TiDelete } from "react-icons/ti";
 import "./Comp.css";
 
-function TaskSubItem({ taskname, date, deleteItem }) {
+function TaskSubItem({ taskname, date, deleteItem_c2 }) {
   const handleDeleteBtn = () => {
-    deleteItem(taskname);
+    deleteItem_c2(taskname);
   };
 
   return (
@@ -16,7 +17,7 @@ function TaskSubItem({ taskname, date, deleteItem }) {
           onClick={handleDeleteBtn}
           className="btn btn-danger kg-button"
         >
-          delete
+          <TiDelete />
         </button>
       </div>
     </div>

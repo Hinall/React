@@ -7,10 +7,10 @@ function TaskItem({ objectArr, deleteItem }) {
       {objectArr.map((object, i) => (
         <>
           <TaskSubItem
-            key={i}
+            key={object.taskname}
             taskname={object.taskname}
             date={object.date}
-            deleteItem={deleteItem}
+            deleteItem_c2={deleteItem}
           />
         </>
       ))}

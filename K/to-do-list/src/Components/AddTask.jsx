@@ -1,9 +1,10 @@
 import React from "react";
+import { IoAdd } from "react-icons/io5";
 import "./Comp.css";
 import { useState } from "react";
 function AddTask({ onNewItem }) {
-  const [taskname, setTaskname] = useState();
-  const [duedate, setduedate] = useState();
+  const [taskname, setTaskname] = useState("");
+  const [duedate, setduedate] = useState("");
 
   const handletaskname = (event) => {
     // console.log(event.target.value);
@@ -15,7 +16,8 @@ function AddTask({ onNewItem }) {
     // console.log(event.target.value);
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event) => {
+    event.preventDefault();
     onNewItem(taskname, duedate);
     setTaskname("");
     setduedate("");
@@ -23,28 +25,26 @@ function AddTask({ onNewItem }) {
 
   return (
     <div>
-      <div className="row kg-row">
-        <div className="col-6">
-          <input
-            type="text"
-            value={taskname}
-            placeholder="Enter task"
-            onChange={handletaskname}
-          />
+      <form onSubmit={handleButtonClick}>
+        <div className="row kg-row">
+          <div className="col-6">
+            <input
+              type="text"
+              value={taskname}
+              placeholder="Enter task"
+              onChange={handletaskname}
+            />
+          </div>
+          <div className="col-4">
+            <input type="date" onChange={handleduedate} value={duedate} />
+          </div>
+          <div className="col-2">
+            <button type="submit" className="btn btn-success kg-button">
+              <IoAdd />
+            </button>
+          </div>
         </div>
-        <div className="col-4">
-          <input type="date" onChange={handleduedate} value={duedate} />
-        </div>
-        <div className="col-2">
-          <button
-            type="button"
-            onClick={handleButtonClick}
-            className="btn btn-success kg-button"
-          >
-            Add
-          </button>
-        </div>
-      </div>
+      </form>
     </div>
   );
 }
