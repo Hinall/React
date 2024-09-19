@@ -1,37 +1,19 @@
 import React from "react";
 import { IoAdd } from "react-icons/io5";
 import "./Comp.css";
-import { useState } from "react";
 import { useRef } from "react";
-import { AllItemsContext } from "../store/AllItems";
+import { myContext } from "../store/AllItems";
 import { useContext } from "react";
 
 function AddTask() {
+  const contextobj = useContext(myContext);
+
   const tasknameRef = useRef("");
   const duedateRef = useRef("");
-  const contextobj = useContext(AllItemsContext);
-  const addItems = contextobj.addItem;
-  // const [taskname, setTaskname] = useState("");
-  // const [duedate, setduedate] = useState("");
-
-  // const handletaskname = (event) => {
-  //   setTaskname(event.target.value);
-  // };
-
-  // const handleduedate = (event) => {
-  //   setduedate(event.target.value);
-  // };
-
-  // const handleButtonClick = (event) => {
-  //   event.preventDefault();
-  //   onNewItem(taskname, duedate);
-  //   setTaskname("");
-  //   setduedate("");
-  // };
 
   const handleAddBtn = (event) => {
     event.preventDefault();
-    addItems(tasknameRef.current.value, duedateRef.current.value);
+    contextobj.addItems(tasknameRef.current.value, duedateRef.current.value);
     tasknameRef.current.value = "";
     duedateRef.current.value = "";
   };
@@ -44,17 +26,12 @@ function AddTask() {
             <input
               type="text"
               ref={tasknameRef}
-              // value={taskname} for two way binding using useState
               placeholder="Enter task"
-              // onChange={handletaskname}
+              required
             />
           </div>
           <div className="col-4">
-            <input
-              type="date"
-              ref={duedateRef}
-              //  onChange={handleduedate}  value={duedate}
-            />
+            <input type="date" ref={duedateRef} required />
           </div>
           <div className="col-2">
             <button type="submit" className="btn btn-success kg-button">
