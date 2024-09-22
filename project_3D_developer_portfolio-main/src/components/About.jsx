@@ -50,10 +50,10 @@ const About = () => {
         I'm a skilled software developer with experience in TypeScript,
         JavaScript, and backend development using Java Spring Boot. I have
         expertise in frameworks like React, Angular, and geospatial technologies
-        such as OpenLayers, Cesium, PostGIS, and GeoServer with PostgreSQL for
-        database management.I'm a quick learner who collaborates closely with
-        clients to create efficient, scalable, and user-friendly solutions that
-        solve real-world problems. Let's bring ideas to life!
+        such as OpenLayers, Cesium, PostGIS, and GeoServer with PostgreSQL
+        htmlFor database management.I'm a quick learner who collaborates closely
+        with clients to create efficient, scalable, and user-friendly solutions
+        that solve real-world problems. Let's bring ideas to life!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

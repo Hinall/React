@@ -122,10 +122,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "Oct 2023 - July 2024",
     points: [
-      "Developed APIs for efficient communication between software components, enhancing system integration.",
+      "Developed APIs htmlFor efficient communication between software components, enhancing system integration.",
       "Optimized data storage and retrieval by implementing PostgreSQL and improving query performance by 20%.",
-      "Integrated 2D and 3D geospatial layers using OpenLayers and Cesium technologies for advanced visualization.",
-      "Leveraged PostGIS and GeoServer for spatial data management, supporting complex geospatial queries.",
+      "Integrated 2D and 3D geospatial layers using OpenLayers and Cesium technologies htmlFor advanced visualization.",
+      "Leveraged PostGIS and GeoServer htmlFor spatial data management, supporting complex geospatial queries.",
       "Collaborated with cross-functional teams, resulting in a 15% increase in project delivery speed."
     ],
   },
@@ -186,7 +186,7 @@ const projects = [
   {
     name: "Digital Twin",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution htmlFor transportation needs.",
     tags: [
       {
         name: "Angular",
@@ -207,7 +207,7 @@ const projects = [
   {
     name: "Parking Assistant",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application that enables users to search htmlFor job openings, view estimated salary ranges htmlFor positions, and locate available jobs based on their current location.",
     tags: [
       {
         name: "HTML",
@@ -228,7 +228,7 @@ const projects = [
   {
     name: "TinDog",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations htmlFor popular destinations.",
     tags: [
       {
         name: "HTML",

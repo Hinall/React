@@ -20,7 +20,7 @@
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
+  background: #000000; /* fallback htmlFor old browsers */
   background: -webkit-linear-gradient(
     to right,
     #434343,
@@ -50,7 +50,7 @@
 }
 
 .orange-text-gradient {
-  background: #f12711; /* fallback for old browsers */
+  background: #f12711; /* fallback htmlFor old browsers */
   background: -webkit-linear-gradient(
     to top,
     #f12711,
@@ -66,7 +66,7 @@
 }
 
 .green-text-gradient {
-  background: #11998e; /* fallback for old browsers */
+  background: #11998e; /* fallback htmlFor old browsers */
   background: -webkit-linear-gradient(
     to top,
     #11998e,
@@ -83,7 +83,7 @@
 
 .blue-text-gradient {
   /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #56ccf2; /* fallback for old browsers */
+  background: #56ccf2; /* fallback htmlFor old browsers */
   background: -webkit-linear-gradient(
     to top,
     #2f80ed,
@@ -99,7 +99,7 @@
 }
 
 .pink-text-gradient {
-  background: #ec008c; /* fallback for old browsers */
+  background: #ec008c; /* fallback htmlFor old browsers */
   background: -webkit-linear-gradient(
     to top,
     #ec008c,
