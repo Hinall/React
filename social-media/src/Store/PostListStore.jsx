@@ -36,6 +36,7 @@ const PostListProvider = ({ children }) => {
   const postListReducer = (currPostList, action) => {
     switch (action.type) {
       case "ADD":
+        console.log(JSON.stringify(action.payload));
         return [action.payload, ...currPostList];
 
       case "DELETE":
