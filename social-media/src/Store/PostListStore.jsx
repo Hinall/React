@@ -36,7 +36,7 @@ const PostListProvider = ({ children }) => {
   const postListReducer = (currPostList, action) => {
     switch (action.type) {
       case "ADD":
-        return [...currPostList, action.payload];
+        return [action.payload, ...currPostList];
 
       case "DELETE":
         return currPostList.filter((post) => post.id !== action.payload.id);
@@ -51,10 +51,10 @@ const PostListProvider = ({ children }) => {
     DEFAULT_POST_LIST
   );
 
-  const addPost = () => {
+  const addPost = (obj) => {
     dispatchPostList({
       type: "ADD",
-      payload: {},
+      payload: obj,
     });
   };
 
